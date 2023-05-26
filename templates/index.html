@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/Priyank-Malviya/Priyank-Malviya/main/favicon.ico"
+        type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            /* Gradient Background */
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            /* Solid Color Background */
+            /* background-color: #f8f8f8; */
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 90px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Added transparency to container background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            /* Added border radius to container */
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Added transparency to header background */
+            padding: 10px;
+            border-bottom: 1px solid #cccccc;
+            text-align: center;
+            border-radius: 10px;
+            /* Added border radius to header */
+            animation: slide-down 1s ease-in-out;
+            /* Added slide-down animation */
+        }
+
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #333333;
+            font-size: 30px;
+            margin: 0;
+            padding: 1px;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            animation: slide-up 1s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            /* Added to evenly distribute the buttons */
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 5px;
+            /* Adjusted margin to decrease spacing */
+            margin-bottom: 10px;
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        li a {
+            color: #333333;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        li a:hover {
+            background-color: #f8f8f8;
+            color: #007bff;
+        }
+
+        li a.active {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+            /* Added box shadow for depth effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        .download-button:hover {
+            background-color: #cccccc;
+            color: #007bff;
+        }
+
+        .button-icon {
+            margin-right: 5px;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            margin-top: 50px;
+            animation: slide-up 1s ease-in-out;
+            /* Added slide-up animation */
+        }
+
+        .cover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(40%);
+            z-index: 0;
+            animation: fade-in 1s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 auto;
+            animation: fade-in 1s ease-in-out;
+            position: relative;
+            /* Added position relative */
+            top: 0px;
+            /* Added negative top value to position it above the cover image */
+            z-index: 1;
+            /* Added z-index to position it above the cover image */
+        }
+
+        .profile-text {
+            margin-top: 20px;
+            text-align: center;
+            color: #050505;
+            font-size: 24px;
+            position: relative;
+            z-index: 1;
+            animation: slide-up 1s ease-in-out;
+            /* Added slide-up animation */
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        .profile-info {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+            animation: fade-in 1s ease-in-out;
+            /* Added fade-in animation */
+        }
+
+        .nav-button {
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+            /* Added box shadow for depth effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-project-button {
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+            /* Added box shadow for depth effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-project-button:hover {
+            background-color: #cccccc;
+            color: #007bff;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-collapse {
+            text-align: center;
+            }
+
+            .navbar-nav {
+            flex-direction: column;
+            }
+
+            .navbar-nav li {
+            margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-light py-2">
+        <div class="container text-center">
+            <h2 class="m-0">Welcome to My Profile</h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://media.licdn.com/dms/image/D4D16AQE0tQTG77GNMA/profile-displaybackgroundimage-shrink_350_1400/0/1684780833506?e=1690416000&v=beta&t=ZPjb1_2HEuyQ9YfhKdnJ-9PNmQqM20W1FkSoX72XyVc"
+                alt="Cover Image" class="cover-image">
+            <div class="profile-text">
+                <img src="https://media.licdn.com/dms/image/D4D03AQGeeg3D4mHdfw/profile-displayphoto-shrink_800_800/0/1675576086816?e=1689811200&v=beta&t=6BI24EjG74DwvD80-u5CAYcSrwioF_XiZMECUVs4W9E"
+                    alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+        <div class="profile-text">
+            <h3 class="profile-name">Priyank Malviya</h3>
+            <p class="profile-info">Software Engineer at Zensar Technologies | Azure | .NET | Python | Synapse | Automic
+                UC4 | JAVA | AZ-204 Certified</p>
+        </div>
+
+        <nav id="btn-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <button class="nav-button" onclick="location.href='/resume'"><i class="fas fa-file-alt button-icon"></i>My Resume</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="projects-Button" class="nav-project-button"><i
+                                class="fas fa-file-alt button-icon"></i>Projects</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="download-Button" class="download-button"><i class="fas fa-download button-icon"></i>
+                            Download Resume</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        var originalButtonHtml = document.getElementById("btn-nav").innerHTML;
+        var isProjectsButtonClicked = false;
+        var newButtonHtml = "";
+
+        function attachDownloadButtonListener() {
+            document.getElementById("download-Button").addEventListener("click", function () {
+                var fileUrl = "https://github.com/Priyank-Malviya/Priyank-Malviya/raw/main/Priyank_Malviya_Resume.pdf";
+                var link = document.createElement("a");
+                link.href = fileUrl;
+                link.download = "Priyank_Malviya_Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+
+        function attachProjectsButtonListener() {
+            document.getElementById("projects-Button").addEventListener("click", loadProjects);
+        }
+
+        function loadProjects() {
+            if (!isProjectsButtonClicked) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/projects", true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        newButtonHtml = xhr.responseText;
+                        document.getElementById("btn-nav").innerHTML = newButtonHtml;
+                        isProjectsButtonClicked = true;
+                        attachBackButtonListener();
+                        attachDownloadButtonListener(); // Attach the event listener to the download button
+                    }
+                };
+                xhr.send();
+            } else {
+                document.getElementById("btn-nav").innerHTML = newButtonHtml;
+                attachBackButtonListener();
+                attachDownloadButtonListener(); // Attach the event listener to the download button
+            }
+        }
+
+        function attachBackButtonListener() {
+            document.getElementById("back-Button").addEventListener("click", function () {
+                document.getElementById("btn-nav").innerHTML = originalButtonHtml;
+                isProjectsButtonClicked = false;
+                attachProjectsButtonListener();
+                attachDownloadButtonListener(); // Attach the event listener to the download button
+            });
+        }
+
+        attachProjectsButtonListener();
+        attachDownloadButtonListener(); // Attach the event listener to the download button
+    </script>
+
+    <script>
+        function redirectToWebsite(link) {
+            window.open(link, "");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Added property */
+        }
+
+        .button {
+            margin: 0 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: black;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #cccccc;
+            color: #007bff;
+        }
+
+        .button-icon {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            /* Adjustments for mobile devices */
+            .button-container {
+                text-align: center;
+                align-self: center;
+            }
+
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                margin: 10px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <button class="nav-project-button" onclick="redirectToWebsite()" title="Vegetation On The way is an online Plants & Flower buying and renting website. That provides an online platform that a user can use to choose their favorite Plants & Flowers to buy or rent it."><i class="fas fa-file-alt button-icon"></i>Vegetation On the way</button>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <button class="nav-project-button" onclick="redirectToWebsite('https://handwritten-recognition.azurewebsites.net/')" title="It identifies the handwritten digits and provides an accurate label of that number, this problem uses a classification model."><i class="fas fa-file-alt button-icon"></i>Digit Recognition System</button>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <button class="nav-project-button" onclick="redirectToWebsite('https://mentalhealthsupport.azurewebsites.net/')" title="Ai based support system to provide the assistance in case of mental health."><i class="fas fa-file-alt button-icon"></i>Mental Health Support System</button>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <button id="back-Button" class="nav-project-button" title="Go Back"><i class="fas fa-arrow-left button-icon"></i>Back</button>
+                </li>
+            </ul>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
