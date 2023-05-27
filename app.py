@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    print("Home")
     return render_template('index.html')
 
 @app.route('/resume')
