@@ -9,6 +9,7 @@ def home():
 
 @app.route('/resume')
 def resume():
+    print("Resume")
     return render_template('PRIYANK_Resume_EX.html')
 
 @app.route('/projects')
