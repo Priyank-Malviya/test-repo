@@ -1,7 +1,7 @@
 # Use an official Python runtime as the base image
 FROM python:3.9
 
-EXPOSE 8002
+EXPOSE 80
 # Set the working directory in the container
 WORKDIR /app
 
