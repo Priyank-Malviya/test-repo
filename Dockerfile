@@ -1,8 +1,8 @@
 # Use an official Python runtime as the base image
 FROM python:3.9
-EXPOSE 80
+EXPOSE 2000
 # Set the working directory in the container
-WORKDIR /
+WORKDIR /app
 
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
