@@ -3,7 +3,7 @@ FROM python:3.9
 
 EXPOSE 8000
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /
 
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
