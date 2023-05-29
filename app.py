@@ -29,7 +29,7 @@ def projects():
 
 @app.route('/path')
 def path():
-    dir_path = str(os.getcwd())
+    dir_path = str(os.path.dirname(os.path.realpath(__file__)))
     logger.debug("At Path")
     return render_template('path.html',path=dir_path)
 

@@ -1,9 +1,19 @@
-2023-05-29 17:09:40,711 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2023-05-29 17:20:56,438 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.0.4:5000
-2023-05-29 17:09:40,711 [33mPress CTRL+C to quit[0m
-2023-05-29 17:09:51,996 Home
-2023-05-29 17:09:52,002 127.0.0.1 - - [29/May/2023 17:09:52] "GET / HTTP/1.1" 200 -
-2023-05-29 17:09:57,271 At Path
-2023-05-29 17:09:57,289 127.0.0.1 - - [29/May/2023 17:09:57] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:20:56,439 [33mPress CTRL+C to quit[0m
+2023-05-29 17:20:59,697 At Path
+2023-05-29 17:20:59,701 127.0.0.1 - - [29/May/2023 17:20:59] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:00,995 At Path
+2023-05-29 17:21:00,995 127.0.0.1 - - [29/May/2023 17:21:00] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:01,603 At Path
+2023-05-29 17:21:01,604 127.0.0.1 - - [29/May/2023 17:21:01] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:01,776 At Path
+2023-05-29 17:21:01,777 127.0.0.1 - - [29/May/2023 17:21:01] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:01,944 At Path
+2023-05-29 17:21:01,945 127.0.0.1 - - [29/May/2023 17:21:01] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:02,108 At Path
+2023-05-29 17:21:02,109 127.0.0.1 - - [29/May/2023 17:21:02] "GET /path HTTP/1.1" 200 -
+2023-05-29 17:21:02,370 At Path
+2023-05-29 17:21:02,370 127.0.0.1 - - [29/May/2023 17:21:02] "GET /path HTTP/1.1" 200 -
