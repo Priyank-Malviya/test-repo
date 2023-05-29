@@ -2,13 +2,15 @@
 FROM python:3.9
 
 # Set the working directory in the container
-
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt app/
+RUN pip install --no-cache-dir -r app/requirements.txt
 
 # copy files required for the app to run
+COPY app.py app/
+COPY templates/* app/templates/
 
 # tell the port number the container should expose
 EXPOSE 5000
 
 # run the application
-CMD ["python", "app.py"]
+CMD ["python", "app/app.py"]
