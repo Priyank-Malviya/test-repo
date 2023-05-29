@@ -1,7 +1,8 @@
 from flask import Flask, render_template
 import logging
+import os 
 
-logging.basicConfig(filename="/home/resume_logs.txt",format='%(asctime)s %(message)s',filemode='a')
+logging.basicConfig(filename="resume_logs.txt",format='%(asctime)s %(message)s',filemode='w')
 
 # Creating an object
 logger = logging.getLogger()
@@ -25,6 +26,12 @@ def resume():
 def projects():
     logger.debug("At Projects")
     return render_template('projects.html')
+
+@app.route('/path')
+def path():
+    dir_path = str(os.getcwd())
+    logger.debug("At Path")
+    return render_template('path.html',path=dir_path)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
