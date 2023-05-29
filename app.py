@@ -14,6 +14,7 @@ def resume():
 
 @app.route('/projects')
 def projects():
+    print("At Projects")
     return render_template('projects.html')
 
 if __name__ == '__main__':
