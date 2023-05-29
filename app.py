@@ -14,23 +14,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    logger.debug("Home")
+    logger.error("Home")
     return render_template('index.html')
 
 @app.route('/resume')
 def resume():
-    logger.debug("Resume")
+    logger.error("Resume")
     return render_template('PRIYANK_Resume_EX.html')
 
 @app.route('/projects')
 def projects():
-    logger.debug("At Projects")
+    logger.error("At Projects")
     return render_template('projects.html')
 
 @app.route('/path')
 def path():
     dir_path = str(os.path.dirname(os.path.realpath(__file__)))
-    logger.debug("At Path")
+    logger.error("At Path")
     return render_template('path.html',path=dir_path)
 
 if __name__ == '__main__':
