@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import logging
 import os 
 
-logging.basicConfig(filename="resume_logs.txt",format='%(asctime)s %(message)s',filemode='w')
+logging.basicConfig(filename="/home/resume_logs.txt",format='%(asctime)s %(message)s',filemode='w')
 
 # Creating an object
 logger = logging.getLogger()
