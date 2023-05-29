@@ -1,20 +1,29 @@
 from flask import Flask, render_template
+import logging
+
+logging.basicConfig(filename="resume_logs.log",format='%(asctime)s %(message)s',filemode='w')
+
+# Creating an object
+logger = logging.getLogger()
+
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    print("Home")
+    logger.debug("Home")
     return render_template('index.html')
 
 @app.route('/resume')
 def resume():
-    print("Resume")
+    logger.debug("Resume")
     return render_template('PRIYANK_Resume_EX.html')
 
 @app.route('/projects')
 def projects():
-    print("At Projects")
+    logger.debug("At Projects")
     return render_template('projects.html')
 
 if __name__ == '__main__':
