@@ -1,12 +1,13 @@
 from flask import Flask, render_template
-import logging
 import os 
+import subprocess
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     print("At home")
+    os.system("echo 'at_home'")
     return render_template('index.html')
 
 @app.route('/resume')
