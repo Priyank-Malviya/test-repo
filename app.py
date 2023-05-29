@@ -13,6 +13,7 @@ def home():
 @app.route('/resume')
 def resume():
     print("Resume")
+    os.system("echo 'at_resume'")
     return render_template('PRIYANK_Resume_EX.html')
 
 @app.route('/projects')
