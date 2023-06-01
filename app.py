@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     print("At home")
-    os.system("echo 'at_home'")
+    os.system("echo 'at_home_new changes'")
     return render_template('index.html')
 
 @app.route('/resume')
