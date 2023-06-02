@@ -28,4 +28,4 @@ def path():
     return render_template('path.html',path=dir_path)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
